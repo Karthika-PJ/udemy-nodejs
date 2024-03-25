@@ -1,0 +1,11 @@
+// const request = require('./request.js');
+// const response = require('./response.js')
+import {send} from './request.mjs';
+import {read} from './response.mjs'
+function makeRequest(url,data){
+send(url,data);
+return read();
+}
+
+const responseData=makeRequest('https://google.com','hello');
+console.log(responseData)
